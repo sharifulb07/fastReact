@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+
+
+import Clock from './components/Clock';
+import Toggle from './components/Toggle';
+import Greeting from './components/Greeting';
+import LogControl from './components/LogControl';
+import Mailbox from './components/Mailbox';
+import Page from './components/Page';
+import MultipleButton from './components/materialui/MultipleButton';
+
+import IconLabelButtons from './components/materialui/IconLabelButton';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Clock increament={3} />
+     <Toggle />
+     <Greeting isToggleOn={true}/>
+    <LogControl />
+    <Mailbox undreadmessage={['React',"vue", "Angular"]}/>
+    <Page />
+   <MultipleButton />
+   <IconLabelButtons />
     </div>
   );
 }
